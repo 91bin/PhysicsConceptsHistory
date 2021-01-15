@@ -21,14 +21,18 @@ public class compass : MonoBehaviour
 
         vertices = new Vector3[]
         {
-            new Vector3(-1, 1, 1),  //left top front
-            new Vector3(1, 1, 1),   //right top front
-            new Vector3(1, -1, 1)   //right bottom front
+           
+            new Vector3(1, 1, 1),   //left top front 0
+            new Vector3(-1, 1, 1), //right top front 1
+            new Vector3(1, -1, 1),   //left bottom front 2
+            new Vector3(-1, -1, 1)   //right bottom front 3
+
         };
 
         triangles = new int[]
         {
-            0,1,2
+            0,1,2,
+            3,2,1
         };
 
         uv = new Vector2[]
@@ -36,7 +40,7 @@ public class compass : MonoBehaviour
             new Vector2(0,1),
             new Vector2(1,0),
             new Vector2(1,1),
-            new Vector2(0,1)
+            new Vector2(0,0)
         };
 
        
